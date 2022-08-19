@@ -1,4 +1,4 @@
-INSERT INTO department (department_name)
+INSERT INTO department (name)
 VALUES ('Admin'),
        ('Engineering'),
        ('Support');
@@ -13,13 +13,14 @@ VALUES ("Project Manager", 150000, 3),
 
 
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Carolina","Hernandez", 1, 2 ),
-       ("Tom" , "Franklin", 2, 3),
-       ("David", "Matinez",3, 1),
-       ("Mark", "Moreno", 4, 2);
+INSERT INTO employee (first_name, last_name, role_id)
+VALUES ("Carolina","Hernandez", 1),
+       ("Tom" , "Franklin", 2),
+       ("David", "Matinez",3),
+       ("Mark", "Moreno", 4);
 
 
       
-
-       
+UPDATE employee SET manager_id = 1 where id= 2;
+UPDATE employee SET manager_id = 1 where id= 3;
+UPDATE employee SET manager_id= 1 where id = 4; 

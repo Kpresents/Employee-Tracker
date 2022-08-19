@@ -4,28 +4,28 @@ CREATE DATABASE mgmt_db;
 USE mgmt_db;
 
 CREATE TABLE department (
-  department_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  department_name VARCHAR(30) NOT NULL
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  name VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE role (
-  role_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
   title VARCHAR(30) NOT NULL,
   salary DECIMAL NOT NULL,
   department_id INT NOT NULL,
-  FOREIGN KEY (role_id)
-  REFERENCES department_id(id)
+  FOREIGN KEY (department_id)
+  REFERENCES department(id)
   ON DELETE CASCADE 
 );
 
 CREATE TABLE employee(
-  employee_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+  id INT NOT NULL AUTO_INCREMENT  PRIMARY KEY ,
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
   role_id INT NOT NULL, 
-  manager_id INT NOT NULL
-  -- null if the employee has no manager 
+  manager_id INT,
   FOREIGN KEY (role_id)
-  REFERENCES department_id(id)
-  ON DELETE SET NULL
+  REFERENCES role(id),
+  FOREIGN KEY (manager_id)
+  REFERENCES employee(id)
 );
