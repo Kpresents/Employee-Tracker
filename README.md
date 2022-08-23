@@ -5,7 +5,7 @@
   ## Description
   This Management tracking application will allow you to manage the company's database by using Node.js, Inquirer and my MySQL.
  
- Demo:  
+ DEMO:  (https://drive.google.com/file/d/1X_bKtFU0MfstxnWThOozNT8A0gLUMZco/view)
 
   ## Table of Contents
   
@@ -32,7 +32,7 @@
   
   ## GitHub 
  GitHub Username: [Kpresents] (https://github.com/Kpresents)
-GitHub Link: 
+ GitHub Link: (https://github.com/Kpresents/Employee-Tracker)
   
   ## Email
  Email: kpresents.0@gmail.com
